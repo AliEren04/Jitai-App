@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Jitai Dissertation App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dexie.min.js"></script>
+    <script src="purify.min.js"></script>
+</head>
+
+<body>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="page-title">Jitai App</span>
+        </div>
+        <ul class="nav-links">
+            <li onclick="navigate('home')">Dashboard</li>
+            <li onclick="navigate('log')"> System Logs</li>
+        </ul>
+    </nav>
+
+    <main id="app-viewport">
+        <section id="home-view" class="page-view active">
+            <header class="view-header">
+                <h2 class="neon-text">Dashboard</h2>
+            </header>
+
+            <div id="container">
+                <div class="cyber-card">
+                    <h3>Scenario 1 </h3>
+                    <p>A cyber event notification simulation, after clicked run button it is all simulation so notthing happened to device!</p>
+                    <button id="btn-start-1" class="glitch-btn">Run Simulation 1</button>
+                </div>
+
+                <div class="cyber-card">
+                    <h3>Scenario 2 </h3>
+                    <p>A cyber event notification simulation, after clicked run button it is all simulation so notthing happened to device!</p>
+                    <button id="btn-start-2" class="glitch-btn">Run Simulation 2</button>
+                </div>
+
+                <div class="cyber-card">
+                    <h3>Scenario 3 </h3>
+                    <p>A cyber event simulation, after clicked run button it is all simulation so notthing happened to device!</p>
+                    <button id="btn-start-3" class="glitch-btn">Run Simulation 3</button>
+                </div>
+
+                <div class="version-tag">Just In Time Adaptive Interventions Simulation App For Dissertation Version 1.0.0 </div>
+            </div>
+        </section>
+
+        <section id="log-view" class="page-view">
+            <header class="view-header">
+                <h2>Event Logs</h2>
+                <button id="clear-logs-btn" class="clear-btn">Clear Logs</button>
+            </header>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                </div>
+                <div id="log-display" class="log-output"></div>
+            </div>
+            <p class="helper-text">Logs are stored locally within indexed db </p>
+        </section>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="logger.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
