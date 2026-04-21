@@ -29,14 +29,23 @@ const LoggerPage = {
             };
         }
 
+        const clearBtn = document.getElementById("clear-logs-btn");
+        if (clearBtn) {
+            clearBtn.onclick = () => {
+                this.showModal("DANGER_ZONE", "Permanently delete all local logs?", async () => {
+                    await Logger.clearLogs();
+                }, true);
+            };
+        }
+
         this.updateStorageUI();
     },
 
     async updateStorageUI() {
-  
+
         const statusText = document.getElementById("storage-status-text");
         const statusDot = document.getElementById("storage-dot");
-    
+
         if (localStorage.getItem('storage_granted') === 'true') {
             statusText.innerText = "Filesystem: Granted";
             statusDot.className = "dot-green";
