@@ -1,5 +1,11 @@
 {
   "appId": "com.alieren.jitai",
   "appName": "Jitai Simulation",
-  "webDir": "www"
+  "webDir": "www",
+  "plugins": {
+  "LocalNotifications": {
+    "smallIcon": "ic_launcher_round",
+    "iconColor": "#00ffff"
+  }
+}
 }

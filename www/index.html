@@ -30,26 +30,60 @@
                 <h2 class="neon-text">Dashboard</h2>
             </header>
 
-            <div id="container">
+            <div id="container">4
+                <div class="cyber-card status-card">
+                    <h3>Storage Status</h3>
+                    <div class="status-indicator">
+                        <span id="storage-status-text">Filesystem: Pending</span>
+                        <div id="storage-dot" class="dot-red"></div>
+                    </div>
+                    <p id="storage-help-text">Storage access is required to export research logs</p>
+                    <button id="btn-request-storage" class="glitch-btn">Grant Access</button>
+                </div>
+
+                <div id="custom-modal" class="modal-overlay">
+                    <div class="cyber-card modal-content">
+                        <h3 id="modal-title">System Message</h3>
+                        <p id="modal-body"></p>
+                        <div class="modal-actions">
+                            <button id="modal-cancel" class="clear-btn">Cancel</button>
+                            <button id="modal-confirm" class="glitch-btn">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cyber-card status-card">
+                    <h3>System Status</h3>
+                    <div class="status-indicator">
+                        <span id="perm-status-text">Notifications: Pending</span>
+                        <div id="status-dot" class="dot-red"></div>
+                    </div>
+                    <p id="perm-help-text">Permissions are required to deliver Just In Time Adaptive Intervention
+                        Notifications for the simulation</p>
+                    <button id="btn-request-perm" class="glitch-btn">Grant Access</button>
+                </div>
                 <div class="cyber-card">
                     <h3>Scenario 1 </h3>
-                    <p>A cyber event notification simulation, after clicked run button it is all simulation so notthing happened to device!</p>
+                    <p>A cyber event notification simulation, after clicked run button it is all simulation so notthing
+                        happened to device!</p>
                     <button id="btn-start-1" class="glitch-btn">Run Simulation 1</button>
                 </div>
 
                 <div class="cyber-card">
                     <h3>Scenario 2 </h3>
-                    <p>A cyber event notification simulation, after clicked run button it is all simulation so notthing happened to device!</p>
+                    <p>A cyber event notification simulation, after clicked run button it is all simulation so notthing
+                        happened to device!</p>
                     <button id="btn-start-2" class="glitch-btn">Run Simulation 2</button>
                 </div>
 
                 <div class="cyber-card">
                     <h3>Scenario 3 </h3>
-                    <p>A cyber event simulation, after clicked run button it is all simulation so notthing happened to device!</p>
+                    <p>A cyber event simulation, after clicked run button it is all simulation so notthing happened to
+                        device!</p>
                     <button id="btn-start-3" class="glitch-btn">Run Simulation 3</button>
                 </div>
 
-                <div class="version-tag">Just In Time Adaptive Interventions Simulation App For Dissertation Version 1.0.0 </div>
+                <div class="version-tag">Just In Time Adaptive Interventions Simulation App For Dissertation Version
+                    1.0.0 </div>
             </div>
         </section>
 
@@ -57,6 +91,7 @@
             <header class="view-header">
                 <h2>Event Logs</h2>
                 <button id="clear-logs-btn" class="clear-btn">Clear Logs</button>
+                <button id="export-logs-btn" class="export-btn">Export Logs</button>
             </header>
 
             <div class="terminal-window">
